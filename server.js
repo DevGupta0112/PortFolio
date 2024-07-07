@@ -31,7 +31,10 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+router.get("/checking-ok", (req,res)=>{
+  res.send("heelo")
+})
+router.post("/contact-me", (req, res) => {
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
